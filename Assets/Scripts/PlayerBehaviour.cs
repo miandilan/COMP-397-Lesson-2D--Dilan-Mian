@@ -22,13 +22,13 @@ public class PlayerBehaviour : MonoBehaviour
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
             //move to the right
-            rigidBody.AddForce(Vector3.right * movementForce);
+            rigidBody.AddForce(new Vector3(1.0f,0,0) * movementForce);
         }
 
         if (Input.GetAxisRaw("Horizontal") < 0)
         {
             //move to the left
-            rigidBody.AddForce(Vector3.left * movementForce);
+            rigidBody.AddForce(new Vector3(-1.0f,0,0) * movementForce);
         }
     }
 }
